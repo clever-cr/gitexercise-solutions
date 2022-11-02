@@ -70,3 +70,5 @@ Lenovo@Clever MINGW64 ~/Desktop/git_exercise (dev)
 $ git branch -D test
 Deleted branch test (was d3e29ff).
 ```
+
+### Exercise 2
