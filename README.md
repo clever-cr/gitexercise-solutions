@@ -285,3 +285,53 @@ Lenovo@Clever MINGW64 ~/Desktop/git_exercise (dev)
 $ git reset --hard
 HEAD is now at b578705 add home and about pages
 ```
+
+## Bundle 2
+
+# Exercise 1
+
+```bash
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (dev)
+$ git checkout -b ft/bundle-2
+Switched to a new branch 'ft/bundle-2'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   README.md
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        service.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/bundle-2)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/bundle-2)
+$ git status
+On branch ft/bundle-2
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   README.md
+        new file:   service.html
+
+
+$ git push origin ft/bundle-2
+Enumerating objects: 6, done.
+Counting objects: 100% (6/6), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 2.39 KiB | 612.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0
+remote:
+remote: Create a pull request for 'ft/bundle-2' on GitHub by visiting:
+remote:      https://github.com/clever-cr/gitexercise-solutions/pull/new/ft/bundle-2
+remote:
+To https://github.com/clever-cr/gitexercise-solutions.git
+ * [new branch]      ft/bundle-2 -> ft/bundle-2
+```
