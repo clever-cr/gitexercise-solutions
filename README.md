@@ -335,3 +335,136 @@ remote:
 To https://github.com/clever-cr/gitexercise-solutions.git
  * [new branch]      ft/bundle-2 -> ft/bundle-2
 ```
+
+# Exercise 2
+
+```bash
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/bundle-2)
+$ git checkout main
+Switched to branch 'main'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+    git branch --set-upstream-to=origin/<branch> main
+
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git pull origin main
+From https://github.com/clever-cr/gitexercise-solutions
+ * branch            main       -> FETCH_HEAD
+Updating d3e29ff..02c030f
+Fast-forward
+ README.md    | 337 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ about.html   |  12 +++
+ home.html    |  12 +++
+ service.html |  12 +++
+ team.html    |  12 +++
+ 5 files changed, 385 insertions(+)
+ create mode 100644 about.html
+ create mode 100644 home.html
+ create mode 100644 service.html
+ create mode 100644 team.html
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git checkout -b ft/service-redesign
+Switched to a new branch 'ft/service-redesign'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign)
+$ git commit -m"Service page"
+[ft/service-redesign 8491622] Service page
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 329 bytes | 329.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote:
+remote: Create a pull request for 'ft/service-redesign' on GitHub by visiting:
+remote:      https://github.com/clever-cr/gitexercise-solutions/pull/new/ft/service-redesign
+remote:
+To https://github.com/clever-cr/gitexercise-solutions.git
+ * [new branch]      ft/service-redesign -> ft/service-redesign
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign)
+$ git checkout main
+Switched to branch 'main'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 337 bytes | 337.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/clever-cr/gitexercise-solutions.git
+   02c030f..fb77f27  main -> main
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git checkout ft/service-redesign
+error: Your local changes to the following files would be overwritten by checkout:
+        service.html
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)                              $ git status
+On branch main
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+CONFLICT (content): Merge conflict in service.html
+Automatic merge failed; fix conflicts and then commit the result.
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign|MERGING)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign|MERGING)
+$ git commit -m"resolving conflicts"
+[ft/service-redesign 682a677] resolving conflicts
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign)
+$ git push
+fatal: The current branch ft/service-redesign has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin ft/service-redesign
+
+To have this happen automatically for branches without a tracking
+upstream, see 'push.autoSetupRemote' in 'git help config'.
+
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign)
+$ git push origin ft/service-redesign
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 219 bytes | 219.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/clever-cr/gitexercise-solutions.git
+   8491622..682a677  ft/service-redesign -> ft/service-redesign
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign)
+$
+```
