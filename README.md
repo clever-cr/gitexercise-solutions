@@ -468,3 +468,107 @@ To https://github.com/clever-cr/gitexercise-solutions.git
 Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/service-redesign)
 $
 ```
+
+### Bundle 3
+
+# Exercise 1
+
+```bash
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git brach ft/contact-page
+git: 'brach' is not a git command. See 'git --help'.
+
+The most similar command is
+       branch
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git branch ft/contact-page
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git checkout ft/team-page
+Switched to branch 'ft/team-page'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/team-page)
+$ git log
+commit f713b0535b8b51e140357dc7782e2852faeaf9b2 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: clever <cleverumuhuza@gmail.com>
+Date:   Mon Nov 7 10:49:30 2022 +0200
+
+   team page
+
+commit f247d5bd253bdc23c6d0a0975caea8cd8934fe79 (origin/ft/service-redesign, ft/service-redesign)
+Author: clever <cleverumuhuza@gmail.com>
+Date:   Fri Nov 4 15:45:07 2022 +0200
+
+   updating Read me
+
+commit 682a677053b630c092b9e67590e24089f8d660f1
+Merge: 8491622 d9538af
+Author: clever <cleverumuhuza@gmail.com>
+Date:   Fri Nov 4 15:41:05 2022 +0200
+
+   resolving conflicts
+
+commit d9538af27938e7941345c99fd5398487e2c050c9 (origin/main, main, ft/contact-page)
+Author: clever <cleverumuhuza@gmail.com>
+Date:   Fri Nov 4 15:28:21 2022 +0200
+
+   changes
+
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/team-page)
+$ git checkout ft/contact-pag
+error: pathspec 'ft/contact-pag' did not match any file(s) known to git
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/team-page)
+$ git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/contact-page)
+$ git cherry-pick f713b0535b8b51e140357dc7782e2852faeaf9b2
+[ft/contact-page 062f0da] team page
+Date: Mon Nov 7 10:49:30 2022 +0200
+1 file changed, 12 insertions(+)
+create mode 100644 team .html
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/contact-page)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/contact-page)
+$ git commit -m"contact page"
+[ft/contact-page 618cc5f] contact page
+1 file changed, 10 insertions(+)
+create mode 100644 contactpage.html
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/contact-page)
+$ git push origin ft/contact-page
+fatal: unable to access 'https://github.com/clever-cr/gitexercise-solutions.git/': Could not resolve host: github.com
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/contact-page)
+$ git push origin ft/contact-page
+fatal: unable to access 'https://github.com/clever-cr/gitexercise-solutions.git/': Could not resolve host: github.com
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/contact-page)
+$ git push origin ft/contact-page
+fatal: unable to access 'https://github.com/clever-cr/gitexercise-solutions.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/contact-page)
+$ git push origin ft/contact-page
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 713 bytes | 356.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/clever-cr/gitexercise-solutions/pull/new/ft/contact-page
+remote:
+To https://github.com/clever-cr/gitexercise-solutions.git
+* [new branch]      ft/contact-page -> ft/contact-page
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/contact-page)
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/faq-page)
+```
