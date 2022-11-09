@@ -773,3 +773,29 @@ remote:
 To https://github.com/clever-cr/gitexercise-solutions.git
  * [new branch]      ft/squashing -> ft/squashing
 ```
+
+## Bundle 5
+
+# Exercise 2
+
+```bash
+
+Lenovo@Clever MINGW64 ~/Desktop/giitcafe-frok/git-cafe-exercise (main)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/giitcafe-frok/git-cafe-exercise (main)
+$ git commit -m"update index"
+[main 6e1c027] update index
+ 1 file changed, 400 insertions(+), 239 deletions(-)
+
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.55 KiB | 794.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/clever-cr/git-cafe-exercise.git
+   d1d3f9c..6e1c027  main -> main
+```
