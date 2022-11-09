@@ -647,3 +647,45 @@ remote:
 To https://github.com/clever-cr/gitexercise-solutions.git
  * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
 ```
+
+## Bundle 4
+
+# Exercise 1
+
+```bash
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/team-page)
+$ git checkout main
+Switched to branch 'main'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git remote add git-copy  https://github.com/clever-cr/git-newsolutions.git
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git commit -m"copy"
+[main 3612cec] copy
+ 1 file changed, 1 insertion(+)
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git push origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+   7bed269..3612cec  main -> main
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git push git-copy  main
+Enumerating objects: 35, done.
+Counting objects: 100% (35/35), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (32/32), done.
+Writing objects: 100% (35/35), 5.63 KiB | 1.41 MiB/s, done.
+Total 35 (delta 15), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (15/15), done.
+To https://github.com/clever-cr/git-newsolutions.git
+ * [new branch]      main -> main
+```
