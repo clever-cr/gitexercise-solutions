@@ -689,3 +689,87 @@ remote: Resolving deltas: 100% (15/15), done.
 To https://github.com/clever-cr/git-newsolutions.git
  * [new branch]      main -> main
 ```
+
+# Exercise 2
+
+```bash
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/footer)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/footer)
+$ git commit -m"footer page"
+[ft/footer d57658f] footer page
+ 1 file changed, 10 insertions(+)
+ create mode 100644 footer.html
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/footer)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/footer)
+$ git commit -m"footer page"
+[ft/footer 31f4980] footer page
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/footer)
+$ git push origin ft/footer
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 711 bytes | 711.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/clever-cr/gitexercise-solutions/pull/new/ft/footer
+remote:
+To https://github.com/clever-cr/gitexercise-solutions.git
+ * [new branch]      ft/footer -> ft/footer
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/footer)
+$ git checkout main
+Switched to branch 'main'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (main)
+$ git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/squashing)
+$ git merge --squash ft/footer
+Updating 3612cec..31f4980
+Fast-forward
+Squash commit -- not updating HEAD
+ footer.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/squashing)
+$ git add .
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/squashing)
+$ git commit -m"footer changes squashing"
+[ft/squashing 12d0e27] footer changes squashing
+ 1 file changed, 12 insertions(+)
+ create mode 100644 footer.html
+
+Lenovo@Clever MINGW64 ~/Desktop/git_exercise (ft/squashing)
+$ git push origin  ft/squashing
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 463 bytes | 463.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote:
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/clever-cr/gitexercise-solutions/pull/new/ft/squashing
+remote:
+To https://github.com/clever-cr/gitexercise-solutions.git
+ * [new branch]      ft/squashing -> ft/squashing
+```
